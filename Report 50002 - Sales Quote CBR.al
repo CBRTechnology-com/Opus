@@ -158,6 +158,10 @@ report 50002 "Sales - Quote CBR"
             column(YourReference_Lbl; FieldCaption("Your Reference"))
             {
             }
+            column(Shipment_Method_Code; "Shipment Method Code")
+            {
+
+            }
             column(ShipmentMethodDescription; ShipmentMethod.Description)
             {
             }
@@ -502,6 +506,10 @@ report 50002 "Sales - Quote CBR"
 
                 }
                 column(Mnfg_Part_No; recItem."Mnfg Part No")
+                {
+
+                }
+                column(Customer_Text; "Customer Text")
                 {
 
                 }
@@ -1199,8 +1207,8 @@ report 50002 "Sales - Quote CBR"
     var
         EnvInfoProxy: Codeunit "Env. Info Proxy";
     begin
-        if EnvInfoProxy.IsInvoicing then
-            LanguageCode := Language.GetUserLanguageCode;
+        // if EnvInfoProxy.IsInvoicing then
+        //     LanguageCode := Language.GetUserLanguageCode;
 
         CurrReport.Language := Language.GetLanguageIdOrDefault(LanguageCode);
     end;

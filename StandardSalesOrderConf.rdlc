@@ -379,6 +379,9 @@ End Function
         <Field Name="DocumentTitle">
           <DataField>DocumentTitle</DataField>
         </Field>
+        <Field Name="Shipment_Method_Code">
+          <DataField>Shipment_Method_Code</DataField>
+        </Field>
         <Field Name="Subtotal_Lbl">
           <DataField>Subtotal_Lbl</DataField>
         </Field>
@@ -534,6 +537,9 @@ End Function
         </Field>
         <Field Name="Mnfg_Part_No">
           <DataField>Mnfg_Part_No</DataField>
+        </Field>
+        <Field Name="Customer_Text">
+          <DataField>Customer_Text</DataField>
         </Field>
         <Field Name="Requested_Delivery_Date">
           <DataField>Requested_Delivery_Date</DataField>

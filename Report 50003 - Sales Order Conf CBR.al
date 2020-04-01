@@ -500,6 +500,10 @@ report 50003 "Sales - Order Conf. CBR"
                 {
 
                 }
+                column(Customer_Text; "Customer Text")
+                {
+
+                }
                 column(Requested_Delivery_Date; FORMAT("Requested Delivery Date"))
                 {
 
@@ -916,6 +920,8 @@ report 50003 "Sales - Order Conf. CBR"
 
                 if not IsReportInPreviewMode then
                     CODEUNIT.Run(CODEUNIT::"Sales-Printed", Header);
+
+
 
                 CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
 

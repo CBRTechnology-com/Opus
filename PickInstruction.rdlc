@@ -387,6 +387,12 @@ End Function
         <Field Name="Project">
           <DataField>Project</DataField>
         </Field>
+        <Field Name="Package_Tracking_No_">
+          <DataField>Package_Tracking_No_</DataField>
+        </Field>
+        <Field Name="ShipmentMethodDescription">
+          <DataField>ShipmentMethodDescription</DataField>
+        </Field>
         <Field Name="External_Document_No_">
           <DataField>External_Document_No_</DataField>
         </Field>

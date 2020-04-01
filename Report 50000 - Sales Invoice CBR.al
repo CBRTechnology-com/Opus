@@ -1130,13 +1130,13 @@ report 50000 "Sales Invoice CBR"
                 EnvInfoProxy: Codeunit "Env. Info Proxy";
                 O365SalesInvoiceMgmt: Codeunit "O365 Sales Invoice Mgmt";
             begin
-                if EnvInfoProxy.IsInvoicing then begin
-                    "Language Code" := Language.GetUserLanguageCode;
-                    CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
-                end;
+                // if EnvInfoProxy.IsInvoicing then begin
+                //     "Language Code" := Language.GetUserLanguageCode;
+                //     CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                // end;
 
-                if not EnvInfoProxy.IsInvoicing then
-                    CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
+                // if not EnvInfoProxy.IsInvoicing then
+                //     CurrReport.Language := Language.GetLanguageIdOrDefault("Language Code");
 
                 if not IsReportInPreviewMode then
                     CODEUNIT.Run(CODEUNIT::"Sales Inv.-Printed", Header);
@@ -1703,12 +1703,12 @@ report 50000 "Sales Invoice CBR"
         if VATClauseCode = '' then
             exit(false);
 
-        if EnvInfoProxy.IsInvoicing then begin
-            if not VATClause.Get(VATClauseCode) then
-                exit(false);
-            if VATClause.Description = '' then
-                exit(false);
-        end;
+        // if EnvInfoProxy.IsInvoicing then begin
+        //     if not VATClause.Get(VATClauseCode) then
+        //         exit(false);
+        //     if VATClause.Description = '' then
+        //         exit(false);
+        // end;
 
         exit(true);
     end;
