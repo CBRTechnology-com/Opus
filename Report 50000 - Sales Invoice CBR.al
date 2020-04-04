@@ -455,6 +455,10 @@ report 50000 "Sales Invoice CBR"
                 {
 
                 }
+                column(Customer_Text; "Customer Text")
+                {
+
+                }
                 column(AmountExcludingVAT_Line; Amount)
                 {
                     AutoFormatExpression = GetCurrencyCode;

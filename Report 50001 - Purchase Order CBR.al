@@ -463,6 +463,11 @@ report 50001 "Purchase Order CBR"
                 {
 
                 }
+                column(Customer_Text; "Customer Text")
+                {
+
+                }
+
                 column(Qty_PurchLine; FormattedQuanitity)
                 {
                 }

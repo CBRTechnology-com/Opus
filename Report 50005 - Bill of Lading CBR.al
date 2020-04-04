@@ -38,6 +38,14 @@ report 50005 "Bill of Lading CBR"
                 {
 
                 }
+                column(Shipping_Agent_Code; "Shipping Agent Code")
+                {
+
+                }
+                column(Shipping_Agent_Service_Code; "Shipping Agent Service Code")
+                {
+
+                }
                 column(Project; Project)
                 {
 
@@ -167,6 +175,10 @@ report 50005 "Bill of Lading CBR"
 
                     }
                     column(Mnfg_Part_No; recItem."Mnfg Part No")
+                    {
+
+                    }
+                    column(Customer_Text; "Customer Text")
                     {
 
                     }

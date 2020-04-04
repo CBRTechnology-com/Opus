@@ -6611,6 +6611,12 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         <Field Name="Freight_on_Board">
           <DataField>Freight_on_Board</DataField>
         </Field>
+        <Field Name="Shipping_Agent_Code">
+          <DataField>Shipping_Agent_Code</DataField>
+        </Field>
+        <Field Name="Shipping_Agent_Service_Code">
+          <DataField>Shipping_Agent_Service_Code</DataField>
+        </Field>
         <Field Name="Project">
           <DataField>Project</DataField>
         </Field>
@@ -6727,6 +6733,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
         </Field>
         <Field Name="Mnfg_Part_No">
           <DataField>Mnfg_Part_No</DataField>
+        </Field>
+        <Field Name="Customer_Text">
+          <DataField>Customer_Text</DataField>
         </Field>
         <Field Name="Net_Weight">
           <DataField>Net_Weight</DataField>

@@ -170,6 +170,10 @@ report 50004 "Pick Instruction CBR"
                     {
 
                     }
+                    column(Customer_Text; "Customer Text")
+                    {
+
+                    }
                     column(Net_Weight; "Net Weight")
                     {
 

@@ -505,6 +505,9 @@ End Function
         <Field Name="Mnfg_Part_No">
           <DataField>Mnfg_Part_No</DataField>
         </Field>
+        <Field Name="Customer_Text">
+          <DataField>Customer_Text</DataField>
+        </Field>
         <Field Name="Qty_PurchLine">
           <DataField>Qty_PurchLine</DataField>
         </Field>
