@@ -377,6 +377,10 @@ report 50003 "Sales - Order Conf. CBR"
             {
 
             }
+            column(Shipping_Agent_Code; "Shipping Agent Code")
+            {
+
+            }
             dataitem(Line; "Sales Line")
             {
                 DataItemLink = "Document No." = FIELD("No.");
@@ -512,7 +516,13 @@ report 50003 "Sales - Order Conf. CBR"
                 {
 
                 }
-                dataitem(AssemblyLine; "Assembly Line")
+                column(SeqNo; SeqNo)
+                {
+
+                }
+
+                dataitem(AssemblyLine;
+                "Assembly Line")
                 {
                     DataItemTableView = SORTING("Document No.", "Line No.");
                     column(LineNo_AssemblyLine; "No.")
@@ -552,7 +562,10 @@ report 50003 "Sales - Order Conf. CBR"
                         "No." := '';
 
                     if recItem.Get("No.") then;
-
+                    //CVIM++
+                    SeqNo := 0;
+                    SeqNo := "Line No." / 10000;
+                    //CVIM--
                     if "Line Discount %" = 0 then
                         LineDiscountPctText := ''
                     else
@@ -1066,6 +1079,7 @@ report 50003 "Sales - Order Conf. CBR"
     var
         SalesConfirmationLbl: Label 'Order Confirmation';
         SalespersonLbl: Label 'Sales person';
+
         CompanyInfoBankAccNoLbl: Label 'Account No.';
         CompanyInfoBankNameLbl: Label 'Bank';
         CompanyInfoGiroNoLbl: Label 'Giro No.';
@@ -1144,6 +1158,7 @@ report 50003 "Sales - Order Conf. CBR"
         DisplayAssemblyInformation: Boolean;
         AsmInfoExistsForLine: Boolean;
         CompanyLogoPosition: Integer;
+        SeqNo: Integer;
         FirstLineHasBeenOutput: Boolean;
         CalculatedExchRate: Decimal;
         ExchangeRateText: Text;
@@ -1169,6 +1184,7 @@ report 50003 "Sales - Order Conf. CBR"
         UnitPriceLbl: Label 'Unit Price';
         LineAmountLbl: Label 'Line Amount';
         SalespersonLbl2: Label 'Salesperson';
+
 
     local procedure InitLogInteraction()
     begin

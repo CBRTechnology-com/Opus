@@ -386,6 +386,10 @@ report 50002 "Sales - Quote CBR"
             {
 
             }
+            column(Shipping_Agent_Code; "Shipping Agent Code")
+            {
+
+            }
 
             dataitem(Line; "Sales Line")
             {
@@ -520,13 +524,21 @@ report 50002 "Sales - Quote CBR"
                 column(PricePer_Lbl; PricePerLbl)
                 {
                 }
+                column(SeqNo; SeqNo)
+                {
+
+                }
 
                 trigger OnAfterGetRecord()
                 begin
                     if Type = Type::"G/L Account" then
                         "No." := '';
-
+                    //CVIM++
+                    SeqNo := 0;
+                    SeqNo := "Line No." / 10000;
+                    //CVIM--
                     if recItem.Get("No.") then;
+
 
                     if "Line Discount %" = 0 then
                         LineDiscountPctText := ''
@@ -990,6 +1002,7 @@ report 50002 "Sales - Quote CBR"
 
     var
         SalesConfirmationLbl: Label 'Sales Quote';
+        SeqNo: Integer;
         YourEstimateLbl: Label 'Your Estimate';
         EstimateLbl: Label 'Estimate';
         SalespersonLbl: Label 'Sales person';

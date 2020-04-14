@@ -424,6 +424,9 @@ End Function
         <Field Name="Project">
           <DataField>Project</DataField>
         </Field>
+        <Field Name="Shipping_Agent_Code">
+          <DataField>Shipping_Agent_Code</DataField>
+        </Field>
         <Field Name="LineNo_Line">
           <DataField>LineNo_Line</DataField>
         </Field>
@@ -546,6 +549,9 @@ End Function
         </Field>
         <Field Name="ExternalDocNo">
           <DataField>ExternalDocNo</DataField>
+        </Field>
+        <Field Name="SeqNo">
+          <DataField>SeqNo</DataField>
         </Field>
         <Field Name="LineNo_AssemblyLine">
           <DataField>LineNo_AssemblyLine</DataField>
